@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="480acc8ec68049469e1e9c2ce0fffa07" Name="Diagram1">
+        <EntityTypeShape EntityType="dbbillografenModel.Booking" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbbillografenModel.Cinema" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbbillografenModel.Member" Width="1.5" PointX="8.125" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbbillografenModel.Movies" Width="1.5" PointX="8.125" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbbillografenModel.Salon" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbbillografenModel.Seats" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <AssociationConnector Association="dbbillografenModel.FK_Booking_Cinema" ManuallyRouted="false" />
+        <AssociationConnector Association="dbbillografenModel.FK_Booking_Member" ManuallyRouted="false" />
+        <AssociationConnector Association="dbbillografenModel.FK_Booking_Movies" ManuallyRouted="false" />
+        <AssociationConnector Association="dbbillografenModel.FK_Booking_Salon" ManuallyRouted="false" />
+        <AssociationConnector Association="dbbillografenModel.FK_Salon_Seats" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
