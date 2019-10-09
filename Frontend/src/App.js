@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { tsExternalModuleReference } from '@babel/types';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         color: '#fff',
         paddingLeft: 16
       }}>
-        <tbody>
+        <header>
           <tr>
             <td>
               <img alt="app icon" width="90" src="Uggla2.PNG"/>
@@ -21,7 +22,7 @@ function App() {
             </td>
             <td width="30"/>
             <td>
-              <h3>Filmer</h3>
+              <h3>Filmer<button onClick={test}>Filmer</button></h3>
             </td>
             <td width="30"/>
             <td>
@@ -36,10 +37,12 @@ function App() {
              <h3>Om Oss</h3>
             </td>
           </tr>
-        </tbody>
+        </header>
       </table>
     </div>
   );
-}
+function test(){
+console.log("test");
+}}
 
 export default App;
