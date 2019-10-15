@@ -12,15 +12,15 @@ class App extends Component {
         <Header className="header-color"  title={<a href="/">BilloGrafen</a>} scroll>
             <Navigation>
                 <Link to="/filmer">Filmer</Link>
-                <Link to="/omoss">Om Oss</Link>
                 <Link to="/medlem">Medlem</Link>
+                <Link to="/omoss">Om Oss</Link>
             </Navigation>
         </Header>
-        <Drawer title="Title">
+        <Drawer title="Meny">
             <Navigation>
-                <Link to="/filmer">Filmer</Link>
-                <Link to="/omoss">Om Oss</Link>
+                <Link to="/filmer">Filmer</Link>        
                 <Link to="/medlem">Medlem</Link>
+                <Link to="/omoss">Om Oss</Link>
             </Navigation>
         </Drawer>
 
