@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import { Grid, Cell} from 'react-mdl';
 
 class OmOss extends Component {
     render() {
         return (
-        <div><h1>Om oss Sida</h1></div>
+        <div style={{width: '100%', height:'100%', margin: 'auto'}}>
+            <Grid className="home-grid"><h1>Om Oss</h1></Grid>
+        </div>
         )
     }
 }
