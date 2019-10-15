@@ -18,7 +18,7 @@ class App extends Component {
         </Header>
         <Drawer title="Title">
             <Navigation>
-            <Link to="/filmer">Filmer</Link>
+                <Link to="/filmer">Filmer</Link>
                 <Link to="/omoss">Om Oss</Link>
                 <Link to="/medlem">Medlem</Link>
             </Navigation>
@@ -28,8 +28,8 @@ class App extends Component {
             <div className="page-content" />
             <Main/>
         </Content>
-
-    <Footer size="mini">
+        
+    <Footer className="header-color" size="mini">
     <FooterSection type="left" logo="Title">
         <FooterLinkList>
             <a href="#">Help</a>
