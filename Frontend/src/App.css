@@ -37,3 +37,8 @@ background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, F
   font-weight: bold;
   color: white;
 }
+.a{
+  font-size: 66px;
+  font-weight: bold;
+  color: white; 
+}
