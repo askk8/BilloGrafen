@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Cell} from 'react-mdl';
 
-
 class Filmer extends Component {
     render() {
         return (

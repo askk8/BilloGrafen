@@ -9,8 +9,7 @@ class App extends Component {
     return (
 <div className="demo-big-content">
     <Layout>
-        <Header className="header-color" title={<Link style={{textDecoration: 'none', color: 'white'}} to="/">BilloGrafen</Link>} scroll>
-            
+        <Header className="header-color" title={<Link style={{textDecoration: 'none', color: 'white'}} to="/">BilloGrafen</Link>} scroll>   
             <Navigation>
                 <Link to="/filmer">Filmer</Link>
                 <Link to="/medlem">Medlem</Link>
@@ -29,16 +28,15 @@ class App extends Component {
             <div className="page-content" />
             <Main/>
         </Content>
-        
-        <Footer className="header-color" size="mini">
-        <FooterSection type="left" logo="Title">
-            <FooterLinkList>
-                <a href="#">Help</a>
-                <a href="#">Privacy & Terms</a>
-            </FooterLinkList>
-        </FooterSection>
-    </Footer>
 
+        <Footer className="footer" size="mini">
+            <FooterSection>
+                <FooterLinkList>
+                     <a href="#">Help</a>
+                     <a href="#">Privacy & Terms</a>
+                </FooterLinkList>
+            </FooterSection>
+        </Footer>
     </Layout>
 </div>
     );

@@ -6,8 +6,6 @@ import Filmer from './filmer';
 import OmOss from './omoss';
 import Medlem from './medlem';
 
-
-
 const Main = () => (
     <Switch>
         <Route exact path="/" component={HomePage} />

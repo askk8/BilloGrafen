@@ -12,18 +12,11 @@ class HomePage extends Component {
                         alt="avatar"
                         className="avatar-img"
                         />
-                        
-                        <div className="banner-text">
-                            <h1>Husse In The Building</h1> 
-                            <h1>Husse In The Building</h1> 
-                            <h1>Husse In The Building</h1> 
-                            <h1>Husse In The Building</h1> 
-                            <h1>Husse In The Building</h1> 
-                            <h1>Husse In The Building</h1> 
-                            <h1>Husse In The Building</h1>  
-                            <h1>Husse In The Building</h1> 
-                        </div>     
-                                         
+                            
+                    <div className="banner-text">
+                        <h1>Husse In The Building</h1> 
+                    </div>     
+                                            
                 </Cell>
             </Grid>
         </div>
