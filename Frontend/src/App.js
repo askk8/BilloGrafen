@@ -17,7 +17,7 @@ class App extends Component {
                 <Link to="/omoss">Om Oss</Link>
             </Navigation>
         </Header>
-        <Drawer title={<Link style={{textDecoration: 'none', color: 'black'}} to="/">BilloGrafen</Link>}>
+        <Drawer title={<Link style={{textDecoration: 'none', color: 'black'}}  to="/">BilloGrafen</Link>}>
             <Navigation>
                 <Link to="/filmer">Filmer</Link>        
                 <Link to="/medlem">Medlem</Link>
