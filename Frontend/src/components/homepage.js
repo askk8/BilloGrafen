@@ -4,8 +4,8 @@ import { Grid, Cell} from 'react-mdl';
 class HomePage extends Component {
     render() {
         return (
-        <div style={{width: '100%', margin: 'auto'}}>
-            <Grid className="home-grid">
+        <div className="home-grid">
+            <Grid>
                 <Cell col={12}>
                     <img
                         src="husse.jpg"
