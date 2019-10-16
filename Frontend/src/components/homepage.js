@@ -4,19 +4,18 @@ import { Grid, Cell} from 'react-mdl';
 class HomePage extends Component {
     render() {
         return (
-        <div className="home-grid">
-            <Grid>
+        <div style={{width: '100%', margin: 'auto'}}>
+            <Grid className="home-grid">
                 <Cell col={12}>
                     <img
                         src="husse.jpg"
                         alt="avatar"
                         className="avatar-img"
                         />
-                            
-                    <div className="banner-text">
-                        <h1>Husse In The Building</h1> 
-                    </div>     
-                                            
+
+                        <div className="banner-text">
+                            <h1>Husse In The Building</h1>
+                        </div>
                 </Cell>
             </Grid>
         </div>
