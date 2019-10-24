@@ -5,8 +5,7 @@ import HomePage from './homepage';
 import Filmer from './filmer';
 import OmOss from './omoss';
 import Medlem from './medlem';
-
-
+import Boka from './boka';
 
 const Main = () => (
     <Switch>
@@ -14,6 +13,7 @@ const Main = () => (
         <Route path="/filmer" component={Filmer} />
         <Route path="/omoss" component={OmOss} />
         <Route path="/medlem" component={Medlem} />
+        <Route path="/boka" component={Boka}/>
     </Switch>
 )
 
