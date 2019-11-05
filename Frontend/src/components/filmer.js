@@ -45,7 +45,7 @@ addMovie(){
                 </div>
                 
                 <p><div className="movieContentDescription">{this.movies[i].overview}</div></p>
-                <input type="button" onClick={this.bookMovie}  value="Boka"/>
+                <input type="button" class="mdl-navigation__link" href="/boka" value="Boka"/>
                 </td>
             </tr>
         </tbody></div>
