@@ -8,11 +8,11 @@ class OmOss extends Component {
         return (
         <div className="home-grid">
             <img src="friend.jpg" width="100%" height="40%"/>
-            <h1></h1>
-            <img src="Adam cropped.jpg"  />
-            <img src="Arian cropped.jpg"  />
-            <img src="Bill cropped.jpg"  />
-
+            <h3>Här är vi!</h3>
+            <a style={{marginRight: 300}}><img src="Adam cropped.jpg"/></a>
+            <a style={{marginRight: 300}}><img src="Arian cropped.jpg"/></a>
+            <a><img src="Bill cropped.jpg"/></a>
+        
             </div>
         )
     }
