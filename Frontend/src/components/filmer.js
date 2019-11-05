@@ -1,128 +1,105 @@
 import React, { Component } from 'react';
-import { Grid, Cell} from 'react-mdl';
+import { Grid, Cell, Button, Input} from 'react-mdl';
 import $ from 'jquery';
+import Boka from './boka';
+import { Switch, Route } from 'react-router-dom';
+import { withRouter } from 'react-router';
 
 class Filmer extends Component {
-    constructor(props){
+constructor(props){
 super(props)
 this.state={}
-// const urlString ="https:api.themoviedb.org/3/search/movie?query=Avengers&api_key=334afa804965b7ed56ac1af164c1f215"
-//https:api.themoviedb.org/3/movie/76341?api_key=334afa804965b7ed56ac1af164c1f215
 
- const movies = [
-     {id:0, poster_src:"https://image.tmdb.org/t/p/w185_and_h278_bestv2/cezWGskPY5x7GaglTTRN4Fugfb8.jpg", title: "Avengers", overview: "Avengers Movie"},
-     {id:1, poster_src:"https://image.tmdb.org/t/p/w185_and_h278_bestv2/aXFC4y051yx6C7eQcemt6nPkLDa.jpg", title: "Avengers 2", overview: "2nd Avengers Movie"},
-     {id:2, poster_src:"https://image.tmdb.org/t/p/w185_and_h278_bestv2/aXFC4y051yx6C7eQcemt6nPkLDa.jpg", title: "Avengers 2", overview: "2nd Avengers Movie"},
-     {id:3, poster_src:"https://image.tmdb.org/t/p/w185_and_h278_bestv2/aXFC4y051yx6C7eQcemt6nPkLDa.jpg", title: "Avengers 2", overview: "2nd Avengers Movie"},
-     {id:4, poster_src:"https://image.tmdb.org/t/p/w185_and_h278_bestv2/aXFC4y051yx6C7eQcemt6nPkLDa.jpg", title: "Avengers 2", overview: "2nd Avengers Movie"},
+//Filmer
 
- ]
+this.movieIdList = [
+    279, 280, 278, 281
+]
 
-
-     var movieRows= []
-     movies.forEach((movie)=>{
-         console.log(movie.title)
-         const movieContentRow = <table  key={movie.id}>
-             <div className="movieContentTable">
-             <tbody> 
-                 <tr>
-                     <td paddingLeft="200">
-                         <img alt="poster"  width="200" src={movie.poster_src}/>
-
-                     </td>
-                     <td>
-                         <div className="movieContentTitle">
-                     {movie.title}
-                     </div>
-                     
-                     <p><div className="movieContentDescription">{movie.overview}</div></p>
-                     
-                     </td>
-                 </tr>
-             </tbody></div>
-         </table>
-         movieRows.push(movieContentRow)
-     })
- this.state ={rows: movieRows}
-
-//  this.fetchMovies()
-// this.performSearch()
+this.movieRows= []
+this.movies = []
+this.updateArrays()
 }
 
-// fetchMovies(){
-//     const urlString ="https:api.themoviedb.org/3/search/movie?query=Avengers&api_key=334afa804965b7ed56ac1af164c1f215"
-//     $.ajax({
-//         url: urlString,
-//         success:(searchResults) =>{
-//                          console.log("Fetched Success")
-//                          console.log(searchResults)
-//                          const results = searchResults.results
-            
-//                          var movieContentRow=[]
-                        
-//                          results.forEach((movie) => {
-//                              console.log(movie.title)
-                            
-//                              movieContentRow.push(movieContentRow)
-//                          })
-            
-//                          this.setState({rows: movieContentRow})
-            
-//                      },
-//                      error: (xhr, status, err) => {
-//                          console.error("failed to succeed")
-//                    }
-//     })
-// }
-// performSearch(){
-//     console.log("Perform Search Using DB")
-//     const urlString ="https:api.themoviedb.org/3/search/movie?query=Avengers&api_key=334afa804965b7ed56ac1af164c1f215"
-//     $.ajax({
-//         url: urlString,
-//         success: (searchResults) =>{
-//             console.log("Fetched Success")
-//             console.log(searchResults)
-//             const results = searchResults.results
+updateArrays(){
+this.movieIdList.forEach((id)=>{
+this.fetchMovies(id)
+//this.addMovie(id)
+})
+}    
 
-//             var movieContentRow=[]
-            
-//             results.forEach((movie) => {
-//                 console.log(movie.title)
+addMovie(){
+    var movieContentRow = ""
+    for(let i = 0; i < this.movies.length; i++){
+        movieContentRow = <table  key={this.movies[i].id}>
+        <div className="movieContentTable">
+        <tbody> 
+            <tr>
+                <td paddingLeft="200">
+                    <img alt="poster"  width="200" src={this.movies[i].poster_path}/>
+
+                </td>
+                <td>
+                    <div className="movieContentTitle">
+                {this.movies[i].title}
+                </div>
                 
-//                 movieContentRow.push(movieContentRow)
-//             })
+                <p><div className="movieContentDescription">{this.movies[i].overview}</div></p>
+                <input type="button" onClick={this.bookMovie}  value="Boka"/>
+                </td>
+            </tr>
+        </tbody></div>
+    </table>
 
-//             this.setState({rows: movieContentRow})
+}
 
-//         },
-//         error: (xhr, status, err) => {
-//             console.error("failed to succeed")
-//         }
+    this.movieRows.push(movieContentRow)
+    console.log(this.movieRows)
+    this.setState({rows: this.movieRows})
+}
 
-        
+fetchMovies(id){
 
-//     })
-// }
+    const urlString ="https://api.themoviedb.org/3/movie/"+id+"?api_key=334afa804965b7ed56ac1af164c1f215"
+    $.ajax({
+        url: urlString,
+        success:(searchResults) =>{
+                         console.log("Fetched Success")
+                         const results = searchResults
+                        
 
-    render() {
-        return (
-        <div className="movieContents">
+var poster_path = "https://image.tmdb.org/t/p/w185"+results.poster_path;                    
+var title = results.title;
+var overview = results.overview;     
+const movieObject = {id:id, poster_path:poster_path, title:title, overview:overview}
 
-            <input style={{
-            fontSize:24,
-            display:'block',
-            width:"100%",
-            paddingTop:3,
-            paddingBottom:3,
-            paddingLeft:16
-            }}
-            placeholder="Enter Search term"/>
-  
+this.movies.push(movieObject)
+
+console.log(this.movies)
+this.addMovie()
+                     },
+                     error: (xhr, status, err) => {
+                         console.error("failed to succeed")
+                   }
+    })
+
+}
+bookMovie() {
+    this.props.history.push('/boka')
+    
+  }
+
+
+render() {
+    return (
+    <div className="movieContents">
+       
             {this.state.rows}
 
         </div>
         )
-    }
-}
 
+    }
+
+}
 export default Filmer;
