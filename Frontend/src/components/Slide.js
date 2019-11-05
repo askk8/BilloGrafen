@@ -17,7 +17,7 @@ const Slideshow = () => {
                 <div className="each-slide">
                     <div>
                         <li>
-                        <a href="http://localhost:3002/filmer">
+                        <a href="./filmer">
                         <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/xcD84rH2f1dytTFeJlopoJ5MKgW.jpg"/>
                         </a>
                         </li>
@@ -26,7 +26,7 @@ const Slideshow = () => {
                 <div className="each-slide">
                     <div>
                     <li>
-                        <a href="http://localhost:3002/filmer">
+                        <a href="./filmer">
                         <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/k0jeyTsYzDWlY6FLfBYOmeShNRw.jpg"/>
                         </a>
                      </li>
@@ -35,7 +35,7 @@ const Slideshow = () => {
                 <div className="each-slide">
                     <div>
                     <li>
-                        <a href="http://localhost:3002/filmer">
+                        <a href="./filmer">
                         <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/ueC9OZEJF98gbPI0RsKaR821qX9.jpg"/>
                         </a>
                      </li>
@@ -44,7 +44,7 @@ const Slideshow = () => {
                 <div className="each-slide">
                     <div>
                     <li>
-                        <a href="http://localhost:3002/filmer">
+                        <a href="./filmer">
                         <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/ePXuKdXZuJx8hHMNr2yM4jY2L7Z.jpg"/>
                         </a>
                      </li>
@@ -53,7 +53,7 @@ const Slideshow = () => {
                 <div className="each-slide">
                     <div>
                     <li>
-                        <a href="http://localhost:3002/filmer">
+                        <a href="./filmer">
                         <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/ogFqy52mfhnlEP7pr5rUCzwngnB.jpg"/>
                         </a>
                      </li>
