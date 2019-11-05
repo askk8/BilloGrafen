@@ -6,6 +6,8 @@ import Filmer from './filmer';
 import OmOss from './omoss';
 import Medlem from './medlem';
 import Boka from './boka';
+import Login from "./Login";
+
 
 const Main = () => (
     <Switch>
@@ -14,6 +16,7 @@ const Main = () => (
         <Route path="/omoss" component={OmOss} />
         <Route path="/medlem" component={Medlem} />
         <Route path="/boka" component={Boka}/>
+        <Route path="/Login" component={Login} />
     </Switch>
 )
 

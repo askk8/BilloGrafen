@@ -5,16 +5,23 @@ import Boka from './boka';
 import { Switch, Route } from 'react-router-dom';
 import { withRouter } from 'react-router';
 
+var selectedMovie = 0;
+
 class Filmer extends Component {
 constructor(props){
 super(props)
 this.state={}
 
+
 //Filmer
 
 this.movieIdList = [
-    279, 280, 278, 281
+    475557, 420809, 420818, 559969, 449924
 ]
+
+
+
+
 
 this.movieRows= []
 this.movies = []
@@ -45,7 +52,7 @@ addMovie(){
                 </div>
                 
                 <p><div className="movieContentDescription">{this.movies[i].overview}</div></p>
-                <input type="button" onClick={this.bookMovie}  value="Boka"/>
+                <input type="button" onClick={(e) =>this.bookMovie(this.movies[i].id)} style={{marginLeft: 10}}  value="Boka"/>
                 </td>
             </tr>
         </tbody></div>
@@ -84,10 +91,13 @@ this.addMovie()
     })
 
 }
-bookMovie() {
+
+
+bookMovie(id){
     this.props.history.push('/boka')
-    
-  }
+    selectedMovie = id
+    console.log(selectedMovie+"YOLSWAS")
+}
 
 
 render() {
@@ -102,4 +112,5 @@ render() {
     }
 
 }
+export {selectedMovie};
 export default Filmer;

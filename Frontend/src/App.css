@@ -67,9 +67,9 @@ div.mdl-mini-footer__left-section{
  }
  
  .movieContentTable{
-   padding-left: 40vw;
+   padding-left: 20vw;
    padding-bottom: 2vh;
-   padding-top: 2vh;
+   padding-top: 5vh;
    
  }
  
@@ -84,4 +84,24 @@ div.mdl-mini-footer__left-section{
    color: white;
    font-size: 2.5vh;
    padding-top: 1vh;
+ }
+
+ .bookContentTable{
+
+  padding-top: 5vh;
+ }
+
+ .btnColor{
+   display: inline-block;
+   border: none;
+   padding: 6px 12px;
+   margin-bottom: 0;
+   font-size: 14px;
+   font-weight: normal;
+   text-align: center;
+   cursor: pointer;
+   border-radius: 4px;
+
+   color: white;
+   background-color: red;
  }

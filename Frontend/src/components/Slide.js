@@ -7,7 +7,7 @@ const proprietes = {
     transitionDuration: 500,
     infinite: true,
     indicators: true,
-    arrows : true
+    arrows: true
 }
 
 const Slideshow = () => {
@@ -18,7 +18,7 @@ const Slideshow = () => {
                     <div>
                         <li>
                         <a href="./filmer">
-                        <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/xcD84rH2f1dytTFeJlopoJ5MKgW.jpg"/>
+                        <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg"/>
                         </a>
                         </li>
                     </div>
@@ -27,7 +27,7 @@ const Slideshow = () => {
                     <div>
                     <li>
                         <a href="./filmer">
-                        <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/k0jeyTsYzDWlY6FLfBYOmeShNRw.jpg"/>
+                        <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/tBuabjEqxzoUBHfbyNbd8ulgy5j.jpg"/>
                         </a>
                      </li>
                     </div>
@@ -36,7 +36,7 @@ const Slideshow = () => {
                     <div>
                     <li>
                         <a href="./filmer">
-                        <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/ueC9OZEJF98gbPI0RsKaR821qX9.jpg"/>
+                        <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/2bXbqYdUdNVa8VIWXVfclP2ICtT.jpg"/>
                         </a>
                      </li>
                     </div>
@@ -54,7 +54,7 @@ const Slideshow = () => {
                     <div>
                     <li>
                         <a href="./filmer">
-                        <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/ogFqy52mfhnlEP7pr5rUCzwngnB.jpg"/>
+                        <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/vn94LlNrbUWIZZyAdmvUepFBeaY.jpg"/>
                         </a>
                      </li>
                     </div>
