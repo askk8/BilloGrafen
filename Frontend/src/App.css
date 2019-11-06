@@ -105,3 +105,10 @@ div.mdl-mini-footer__left-section{
    color: white;
    background-color: red;
  }
+ 
+ .movieTimeAndDate{
+  color: white;
+  font-size: 2vh;
+  padding-bottom: 2vh;
+  padding-top: 2vh;
+}
