@@ -4,6 +4,10 @@ import { Grid, Cell} from 'react-mdl';
 import $ from 'jquery';
 import Filmer from './filmer';
 import  {selectedMovie} from './filmer.js';
+import { bool } from 'prop-types';
+
+var seat1 = true
+var seat2 = true
 
 class boka extends Component{
     constructor(props){
@@ -12,11 +16,21 @@ class boka extends Component{
 
 
 
-
+this.bookMovieSeat=[[]]
 this.activeMovie = []
 this.fetchMovies(selectedMovie)
 this.movieRows= []
 this.thisMovie()
+
+
+// SKA VA SAMMA SOM PÅ FILMER
+this.movieIdList = [
+    279, 280, 278, 281, 2000, 250, 2001
+]
+/////////////////////////////
+//this.makeSeats()
+
+
 }
 
 thisMovie(){
@@ -64,9 +78,11 @@ bookMovie(){
                     <div className="movieContentTitle">
                 {this.activeMovie[0].title}
                 </div>
-                
+               
                 <p><div className="movieContentDescription">{this.activeMovie[0].overview}</div></p>
-                {/* <input type="button" onClick={(e) =>this.bookMovie(this.thisMovie[i].id)} value="Boka"/> */}
+                <div className="movieTimeAndDate">Lördag klockan 21:33</div>
+                <input type="button" onClick={(e) =>this.bokaStol(1)} value="Boka Stol 1"/>
+                <input type="button" onClick={(e) =>this.bokaStol(2)} value="Boka Stol 2"/>
                 </td>
             </tr>
         </tbody></div>
@@ -75,9 +91,33 @@ console.log(this.activeMovie[0].title)
 this.movieRows.push(movieContentRow)
 this.setState({rows: this.movieRows})
 }
+bokaStol(id){
+    console.log(seat1)
+if (id === 1 && seat1===true){
+    seat1=false
+    return
+}
+if (id === 2 && seat2===true){
+    seat2=false
+    return
+}
+ if (id === 1 && seat1===false){
+     seat1=true
+     return
+ }
+if (id === 2 && seat2===false){
+    seat1=true
+    return
+}
+}
+// makeSeats(){
+//  this.movieIdList.forEach((id)=>{
 
 
-
+    
+//      })
+     
+// }
 
 
 
