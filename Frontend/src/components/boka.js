@@ -93,6 +93,7 @@ this.setState({rows: this.movieRows})
 }
 bokaStol(id){
     console.log(seat1)
+    alert("Nu har du Bokat din stol!");
 if (id === 1 && seat1===true){
     seat1=false
     return
