@@ -16,7 +16,7 @@ this.state={}
 //Filmer
 
 this.movieIdList = [
-    475557, 420809, 420818, 559969, 449924
+    475557, 250, 420809, 420818, 559969, 449924, 450000, 251, 280, 520
 ]
 
 
@@ -52,7 +52,7 @@ addMovie(){
                 </div>
                 
                 <p><div className="movieContentDescription">{this.movies[i].overview}</div></p>
-                <input type="button" onClick={(e) =>this.bookMovie(this.movies[i].id)} style={{marginLeft: 10}}  value="Boka"/>
+                <input className="btnColor" type="button" onClick={(e) =>this.bookMovie(this.movies[i].id)} style={{marginLeft: 10}}  value="Boka"/>
                 </td>
             </tr>
         </tbody></div>

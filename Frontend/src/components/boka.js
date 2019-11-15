@@ -81,7 +81,7 @@ bookMovie(){
                
                 <p><div className="movieContentDescription">{this.activeMovie[0].overview}</div></p>
                
-                <div style={{marginLeft: 190}} className="movieTimeAndDate">Lördag klockan 13:37 - Salong 1</div>
+                <div style={{marginLeft: 130}} className="movieTimeAndDate">Lördag 10 November Klockan 20:00 - Salong 1</div>
                 <input style={{marginRight: 50, marginLeft: 200}} className="btnColor" type="button" onClick={(e) =>this.bokaStol(1)} value="Boka Stol 1"/>
                 <input className="btnColor" type="button" onClick={(e) =>this.bokaStol(2)} value="Boka Stol 2"/>
                 

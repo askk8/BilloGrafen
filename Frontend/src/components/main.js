@@ -7,6 +7,7 @@ import OmOss from './omoss';
 import Medlem from './medlem';
 import Boka from './boka';
 import Login from "./Login";
+import Users from "./Users";
 
 
 const Main = () => (
@@ -17,6 +18,7 @@ const Main = () => (
         <Route path="/medlem" component={Medlem} />
         <Route path="/boka" component={Boka}/>
         <Route path="/Login" component={Login} />
+        <Route path="/Users" component={Users} />
     </Switch>
 )
 

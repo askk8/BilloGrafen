@@ -16,6 +16,7 @@ class App extends Component {
                 <Link to="/filmer">𝐅𝐢𝐥𝐦𝐞𝐫</Link>
                 <Link to="/omoss">𝐎𝐦 𝐨𝐬𝐬</Link>
                 <Link to="/Login">𝐋𝐨𝐠𝐠𝐚 𝐢𝐧</Link>
+                <Link to="/Users">Registrera</Link>
             </Navigation>
         </Header>
         <Drawer title={<Link style={{textDecoration: 'none', color: 'black'}}  to="/">BilloGrafen</Link>}>
@@ -23,6 +24,7 @@ class App extends Component {
                 <Link to="/filmer">Filmer</Link>        
                 <Link to="/omoss">Om Oss</Link>
                 <Link to="/Login">Logga in</Link>
+                <Link to="/Users">Registrera</Link>
             </Navigation>
         </Drawer>
 
@@ -36,6 +38,7 @@ class App extends Component {
                 <FooterLinkList>
                      <a href="https://elev.skolinspektionen.se/globalassets/bilder/full-bredd/elevwebben/hjalp.png">Hjälp</a>
                      <a href="http://powertrainnorden.se/wp-content/uploads/2018/04/Powertrain-villkor.jpg">Intergritet & Villkor</a>
+                     <a href="https://www.nordiskamuseet.se/sites/default/files/event/41_foa6673_alt_gustav_adolfsdagen.jpg">Gustav Adolfsdag!</a>
                 </FooterLinkList>
             </FooterSection>
         </Footer>
