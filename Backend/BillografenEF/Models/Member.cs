@@ -20,7 +20,7 @@ namespace BillografenEF.Models
             this.Booking = new HashSet<Booking>();
         }
     
-        public int ID { get; set; }
+        public int MemberID { get; set; }
         public string SurName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }

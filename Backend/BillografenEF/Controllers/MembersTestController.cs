@@ -29,7 +29,7 @@ namespace BillografenEF.Controllers
 
             while (red.Read())
             {
-                ret.Add(new MemberViewModel {userName = red[0].ToString() });
+                ret.Add(new MemberViewModel {UserName = red[0].ToString() });
             }
 
             red.Close();
